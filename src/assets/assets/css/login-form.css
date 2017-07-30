@@ -1,0 +1,109 @@
+.form-signin {
+  width: 380px;
+  padding: 3% 0 0;
+  margin: auto;
+}
+.form-deviceEntry {
+  width: 380px;
+  padding: 2% 0 0;
+  margin-left: 500px;
+  margin: auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+header {
+    padding: 4px;
+	/*background: black;color:white;*/
+    width:99%;
+    height: 100px;   
+}
+.logo{
+    position:absolute;
+    right:900px;
+    left:20px;
+    top: 20px;
+}
+.logout{
+    position: absolute;
+    color: black;
+    right:20px;
+    left:1000px;
+}
+
+#mapCanvas {
+	width: 700px;
+    height: 700px;
+  }
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.radio{
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+
+}
+.form-deviceEntry .input-form{
+    position: absolute;
+    height: auto;
+    padding-left: 250px;
+   -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+   
+}
+.headline{
+    font-size: 10px;
+    color:#485e8d;
+    opacity: 0.5;
+}
+.form-deviceEntry{
+ position:absolute;
+    right:10px;
+    left:800px;
+    top: 100px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.footer-div
+{
+  position:absolute;
+   bottom:0;
+   width:99%;
+   height:20px;   
+   background:black;
+   color: white;
+   font-family: sans-serif;
+}
+h2{
+  font-size:1.4em;
+  text-align: center;
+  color: Black;
+}

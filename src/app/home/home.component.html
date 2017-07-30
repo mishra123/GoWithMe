@@ -1,0 +1,98 @@
+
+<div style="text-align:center">
+<div class="flex-container"> <header>
+   <img class="logo" width="150" src="./assets/images/logo.png">
+   <h1>
+
+    Register Beacon Devices </h1>
+     <!--  <div style="height:200px;" *ngIf="deviceReturned!=null" class="alert alert-danger">
+       <div *ngFor='let device of devices | async'>
+        {{ device }}
+    </div></div> -->
+     <a class="logout" [routerLink]="['/home/deviceregistry/logout']">Logout</a>         
+  </header>
+  </div></div>
+ <div style="height: 20px;"></div>
+
+ <div class="form">
+      <div #mapElement id="map" style="height:900px;width:890px;" class="map"> </div> 
+  <a class="overlay" id="vienna" target="_blank" href="http://en.wikipedia.org/wiki/Vienna">Vienna</a>
+  <div id="marker" title="Marker"></div>
+
+   <form class="form-deviceEntry">
+     <label class="control-label">Location of Bluetooth Device</label>
+   <div class="form-group">
+        <input class="form-control" type="text" placeholder="Enter Latitude" id="latitude"
+            [(ngModel)]="latitude" name="latitude" required #lati="ngModel">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Enter Longitude" id="longitude"
+            [(ngModel)]="longitude" name="longitude" required #longi="ngModel">
+      </div>
+       <div class="form-group">
+        <input class="form-control" type="text" placeholder="Enter Floor" id="floor"
+            [(ngModel)]="floor" name="floor" required #flr="ngModel">
+      </div>
+     
+    <div class="form-group"> 
+      <div class="dropdown">
+       <select class="btn btn-default dropdown-toggle">
+           <option>Type of  Bluetooth Device</option>
+           <option *ngFor = "let deviceType of deviceTypes" value = {{deviceType.name}}>
+           {{deviceType.name}}
+           </option>
+       </select>
+     </div>
+    </div>
+       <div class="form-group">
+        <input class="form-control" type="text" placeholder="Enter UUID" id="uuid"
+            [(ngModel)]="uuid" name="uuid" required #uid="ngModel">
+      </div>
+       <label class="control-label">Power Source</label>
+      <div class="form-group"> 
+        <label class="control-label">
+        <input type="radio" id="pSource"
+            [(ngModel)]="pSource" name="pSource" value="battery">Battery</label>
+      </div>
+      <div class="form-group"> 
+        <label class="control-label">
+        <input type="radio" id="pSource"
+            [(ngModel)]="pSource" name="pSource" value="usb">USB</label>
+      </div>
+      <div class="form-group"> 
+        <label class="control-label">
+        <input  type="radio"  id="pSource"
+            [(ngModel)]="pSource" name="pSource" value="solar">Solar</label>
+      </div>
+      <div class="form-group"> 
+        <label class="control-label">
+        <input type="radio"  id="pSource"
+            [(ngModel)]="pSource" name="pSource" value="240v">240v</label>
+      </div>
+      <div class="form-group">
+         <label class="control-label">Date when battery was installed</label>
+        <input class="form-control" type="date" id="date"
+            [(ngModel)]="date" name="date" required #dt="ngModel">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Battery Life in months" id="bLife"
+            [(ngModel)]="bLife" name="bLife" required #life="ngModel">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Battery Life in months" id="bLife"
+            [(ngModel)]="bLife" name="bLife" required #life="ngModel">
+      </div>
+       <div class="form-group">
+        <input class="form-control" type="text" placeholder="Power in Watts" id="power"
+            [(ngModel)]="power" name="power" required #pwr="ngModel">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Range in meters" id="range"
+            [(ngModel)]="range" name="range" required #rng="ngModel">
+      </div>
+       <button type="submit" class="btn btn-info btn-block" (click)="showDevices()">Save</button>
+   </form>
+
+ </div>
+
+           

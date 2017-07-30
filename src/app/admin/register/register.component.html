@@ -1,0 +1,64 @@
+<div class="container">
+  <div style="text-align:center">
+  <img width="200" src="./assets/images/logo.png">
+<div class="flex-container"> <header>
+   <h1>
+    Register Beacon Devices
+  </h1>
+  </header>
+  </div>
+  </div></div>
+<div class="form-signin">
+  <div *ngIf="errorMessage!=null" class="alert alert-danger">
+        {{ errorMessage }}
+    </div>
+  <div class="form-group">
+    <h2>Create Account</h2></div>
+  <div class="form">
+    <form class="form-signin">
+        <div class="form-group">
+        <input type="text" placeholder="Enter Organisation Name" id="org"  class="form-control"
+            [(ngModel)]="org" name="org" required #or="ngModel">
+      </div>  
+        <div class="form-group">
+        <input type="text" placeholder="Enter Country" id="country"  class="form-control"
+            [(ngModel)]="country" name="country" required #c="ngModel">
+      </div>
+        
+       <div class="form-group">
+        <input type="text" placeholder="Enter Name" id="name"  class="form-control"
+            [(ngModel)]="name" name="name" required #nme="ngModel">
+      </div>  
+        <div class="form-group">
+        <input type="text" placeholder="Enter Gender" id="gender"  class="form-control"
+            [(ngModel)]="gender" name="gender" required #gn="ngModel">
+      </div> 
+       <div class="form-group">
+        <input type="text" placeholder="Enter Address" id="address"  class="form-control"
+            [(ngModel)]="address" name="country" required #add="ngModel">
+      </div>
+      <div class="form-group">
+        <input type="number" placeholder="Enter Phone Number" id="phone"  class="form-control"
+            [(ngModel)]="phone" name="phone" required #phn="ngModel">
+      </div> 
+      <div class="form-group">
+        <input type="text" placeholder="Enter Email" id="username"  class="form-control"
+            [(ngModel)]="username" name="username" required #user="ngModel">
+      </div>
+         <div class="form-group">
+        <input type="password" placeholder="Enter Password" id="password" class="form-control"
+            [(ngModel)]="password" name="password" required #pwd="ngModel">
+        </div>
+        
+      <div class="form-group">
+        <input type="text" placeholder="Enter Website" id="website" class="form-control"
+            [(ngModel)]="website" name="website" required #wbs="ngModel">
+        </div>
+       
+    
+    <button type="submit" class="btn btn-info btn-block" (click)="register()">Create your account</button>
+      <p>
+        <a style="background-color:black" [routerLink]="['/home/resetpassword/']"> <i class="fa fa-fw fa-group"></i> Forgot Password?</a><br/>
+      </p>
+ </form>
+</div></div>
